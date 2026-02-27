@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NirData | Certificate System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+        .cert-container { width: 800px; min-height: 1000px; margin: 2rem auto; background: white; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); border-radius: 4px; padding: 60px; position: relative;}
+        .cert-bg-logo { position: absolute; top: 20px; right: 20px; opacity: 0.03; width: 300px; pointer-events: none; }
+    </style>
+</head>
+<body class="p-8">
+
+    <!-- Top Navigation Bar (Mockup for Landing Page) -->
+    <div class="max-w-4xl mx-auto flex justify-between items-center mb-8 px-4">
+        <a href="#" class="text-gray-400 hover:text-gray-600 transition flex items-center gap-2">
+            <span>&laquo;</span> LandingPage
+        </a>
+        <div class="flex gap-4">
+            <button class="bg-[#FF6B00] hover:bg-[#E65F00] text-white px-6 py-2 rounded font-semibold flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download Image
+            </button>
+            <button class="bg-[#334155] hover:bg-[#1E293B] text-white px-6 py-2 rounded font-semibold flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                Export PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CERTIFICATE CARD -->
+    <div class="cert-container border-t-8 border-[#FF6B00]">
+        
+        <!-- Header Section -->
+        <div class="flex justify-between items-start mb-12">
+            <div class="flex items-center gap-3">
+                <div class="bg-[#FF6B00] p-2 rounded-lg">
+                    <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm0 16.91c-3.11-.93-5.5-4.22-5.5-8V6.44l5.5-2.06 5.5 2.06v4.41c0 3.78-2.39 7.07-5.5 8z"/></svg>
+                </div>
+                <h1 class="text-3xl font-bold text-[#1F2937] tracking-tight">NirData</h1>
+            </div>
+            <div class="flex items-center gap-2 bg-[#F0FDF4] border border-[#DCFCE7] px-4 py-2 rounded-full">
+                <div class="bg-[#22C55E] w-2 h-2 rounded-full"></div>
+                <span class="text-[#166534] font-semibold text-sm">Verified</span>
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="text-4xl font-bold text-gray-900 mb-2">Proof-of-Wipe Certificate</h2>
+            <p class="text-gray-500 text-lg">This certifies that this device has undergone a verified data-wipe procedure.</p>
+        </div>
+
+        <!-- Hardware Info Grid -->
+        <div class="bg-gray-50/50 rounded-xl border border-gray-100 p-8 grid grid-cols-2 gap-y-6 gap-x-12 mb-10">
+            <div>
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Manufacturer</p>
+                <p class="text-gray-900 font-semibold">Oppo</p>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Model</p>
+                <p class="text-gray-900 font-semibold">K13 (CPH2729)</p>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Device ID</p>
+                <p class="text-gray-900 font-semibold">CPH2729</p>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">OS Version</p>
+                <p class="text-gray-900 font-semibold">Android 15</p>
+            </div>
+            <div class="relative group">
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Serial Number</p>
+                <p class="text-gray-900 font-mono tracking-widest font-bold">********</p>
+                <svg class="w-4 h-4 text-gray-400 absolute right-1 top-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <div class="relative">
+                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">IMEI</p>
+                <p class="text-gray-900 font-mono tracking-widest font-bold">....................</p>
+                <svg class="w-4 h-4 text-gray-400 absolute right-1 top-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+            </div>
+        </div>
+
+        <!-- Technical Verification Block -->
+        <div class="bg-[#F8FAFC] rounded-lg p-8 mb-12">
+            <p class="text-gray-600 leading-relaxed text-sm italic">
+                This certifies that a data wipe operation was successfully performed and verified for the following device (CurrentUser):Device ID: CPH2729IMEI: 531073480198345Serial Number: I60fc34rManufacturer: OppoModel: K13 (CPH2729)OS Version: Android 15Wipe Status: SuccessTimestamp of Wipe: 2025-09-29T20:21:56.840ZAuditor Signature: <br>
+                <span class="font-mono font-bold text-gray-800 break-all text-xs">0x43504832373239323032352d30392d32395432303a32313a35362e3834305a</span><br><br>
+                Blockchain Transaction ID:<br>
+                <span class="font-mono font-bold text-[#FF6B00] break-all text-xs">0x353****************************************0392d3239543303a32313aThis</span><br>
+                data wipe has been verified and permanently anchored on the blockchain
+            </p>
+        </div>
+
+        <!-- Document Footer -->
+        <div class="border-t border-gray-100 pt-8 mt-auto">
+            <div class="flex justify-between items-end">
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400">Timestamp (UTC)</p>
+                        <p class="text-sm text-gray-600">9/29/2025, 8:21:56 PM</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400">Blockchain Transaction ID</p>
+                        <p class="text-[10px] font-mono text-gray-400 break-all w-[500px]">0x353331303733343830313938333435323032352d30392d32395432303a32313a</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <!-- Dynamic Placeholder for QR Code later -->
+                    <div class="bg-gray-100 w-24 h-24 ml-auto flex items-center justify-center text-[10px] text-gray-400 border border-dashed border-gray-300">
+                        Blockchain QR
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

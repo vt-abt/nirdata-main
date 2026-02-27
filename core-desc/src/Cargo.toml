@@ -1,0 +1,33 @@
+[package]
+name = "nirdata-core"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+libc = "0.2.153"
+nix = { version = "0.27.1", features = ["fs", "ioctl"] }
+clap = { version = "4.5.1", features = ["derive"] }
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+rayon = "1.8.1"
+
+[dependencies]
+# Direct syscalls and ioctls for disk firmware commands
+libc = "0.2.153"
+nix = { version = "0.27.1", features = ["fs", "ioctl", "term"] }
+
+# Robust CLI argument handling
+clap = { version = "4.5.1", features = ["derive"] }
+
+# Serialization for audit logging
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+
+# Thread management for multi-pass overwrites
+rayon = "1.8.1"
+
+[profile.release]
+opt-level = "z"     # Optimize for size to fit in RAM
+lto = true          # Link-time optimization
+panic = "abort"     # Strip metadata to reduce binary footprint
+strip = true        # Remove symbols
